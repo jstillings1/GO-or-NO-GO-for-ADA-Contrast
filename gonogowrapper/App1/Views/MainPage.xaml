@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="App1.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Style="{StaticResource PageStyle}"
+    mc:Ignorable="d">
+    <Grid
+        x:Name="ContentArea"
+        Margin="{StaticResource MediumLeftRightMargin}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            Grid.Row="0"
+            x:Uid="Main_Title"
+            Style="{StaticResource PageTitleStyle}" />
+        <Grid
+            Grid.Row="1" 
+            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+            <ColorPicker x:Name="Forground_Color" HorizontalAlignment="Left" Margin="54,0,0,0" VerticalAlignment="Center" FontSize="30" PreviousColor="Gold" ColorChanged="Forground_Color_ColorChanged"/>
+            <TextBlock x:Name="Forground__Color_Label" HorizontalAlignment="Left" Margin="100,10,0,0" Text="Forground Color" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30"/>
+            <ColorPicker x:Name="Background_Color" HorizontalAlignment="Left" Margin="389,0,0,0" VerticalAlignment="Center" FontSize="30" ColorChanged="Background_Color_ColorChanged"/>
+            <TextBlock x:Name="Background_Color_label" HorizontalAlignment="Left" Margin="408,10,0,0" Text="Background Color" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" RenderTransformOrigin="0.433,-0.425"/>
+            <TextBlock x:Name="AA_Label" HorizontalAlignment="Left" Margin="706,78,0,0" Text="AA Result =" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36"/>
+            <TextBlock x:Name="AA_Result" HorizontalAlignment="Left" Margin="715,144,0,0" Text="Let's see!" TextWrapping="Wrap" VerticalAlignment="Top" Height="122" FontSize="30" Width="392"/>
+            <TextBlock x:Name="AAA_Label" HorizontalAlignment="Left" Margin="715,341,0,0" Text="AAA Result =" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" RenderTransformOrigin="3.767,-8.75"/>
+            <TextBlock x:Name="AAA_Result" HorizontalAlignment="Left" Margin="715,426,0,0" Text="Let's See!" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" RenderTransformOrigin="0.395,3.55" Width="392" Height="144"/>
+            <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
+                Place your content here.-->
+        </Grid>
+    </Grid>
+</Page>
